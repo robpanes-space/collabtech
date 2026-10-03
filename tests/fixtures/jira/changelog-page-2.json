@@ -1,0 +1,90 @@
+{
+  "issueChangeLogs": [
+    {
+      "issueId": "10010",
+      "changeHistories": [
+        {
+          "id": "502",
+          "author": null,
+          "created": 1791014400000,
+          "items": [
+            {
+              "field": "status",
+              "fieldtype": "jira",
+              "fieldId": "status",
+              "from": "10001",
+              "fromString": "In Progress",
+              "to": "10001",
+              "toString": "Done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issueId": "10015",
+      "changeHistories": [
+        {
+          "id": "520",
+          "author": {
+            "self": "https://example.atlassian.net/rest/api/3/user?accountId=5f00",
+            "accountId": "5f0000000000000000000001",
+            "emailAddress": "alex.rivera@example.com",
+            "displayName": "Sam Chen",
+            "active": true,
+            "timeZone": "Asia/Manila",
+            "accountType": "atlassian"
+          },
+          "created": 1790942400000,
+          "items": [
+            {
+              "field": "Story point estimate",
+              "fieldtype": "custom",
+              "fieldId": "customfield_10016",
+              "from": null,
+              "fromString": null,
+              "to": null,
+              "toString": "3"
+            },
+            {
+              "field": "assignee",
+              "fieldtype": "jira",
+              "fieldId": "assignee",
+              "from": null,
+              "fromString": null,
+              "to": "5f0000000000000000000002",
+              "toString": "Sam Chen"
+            },
+            {
+              "field": "priority",
+              "fieldtype": "jira",
+              "fieldId": "priority",
+              "from": "3",
+              "fromString": "Medium",
+              "to": "2",
+              "toString": "High"
+            },
+            {
+              "field": "labels",
+              "fieldtype": "jira",
+              "fieldId": "labels",
+              "from": null,
+              "fromString": "",
+              "to": "",
+              "toString": "risk p0"
+            },
+            {
+              "field": "Rank",
+              "fieldtype": "custom",
+              "fieldId": "customfield_10019",
+              "from": null,
+              "fromString": "",
+              "to": "",
+              "toString": "Ranked higher"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

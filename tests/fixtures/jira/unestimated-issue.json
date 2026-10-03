@@ -1,0 +1,54 @@
+{
+  "id": "10017",
+  "key": "SCRUM-17",
+  "self": "https://example.atlassian.net/rest/api/3/issue/10017",
+  "fields": {
+    "summary": "Define Zoho custom module for Price Books",
+    "issuetype": {
+      "id": "10004",
+      "name": "Story",
+      "subtask": false,
+      "hierarchyLevel": 0
+    },
+    "status": {
+      "id": "10000",
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "assignee": {
+      "accountId": "5f0000000000000000000001",
+      "displayName": "Alex Rivera",
+      "active": true
+    },
+    "priority": {
+      "id": "3",
+      "name": "Medium"
+    },
+    "labels": [],
+    "issuelinks": [],
+    "created": "2026-09-20T10:15:00.000+0800",
+    "updated": "2026-10-01T16:40:12.345+0800",
+    "resolutiondate": null,
+    "duedate": null,
+    "parent": {
+      "id": "9002",
+      "key": "SCRUM-2",
+      "fields": {
+        "summary": "M2 - Zoho Schema, Modules & Field Mapping",
+        "issuetype": {
+          "name": "Epic",
+          "hierarchyLevel": 1
+        }
+      }
+    },
+    "sprint": {
+      "id": 3,
+      "name": "MIG S2 - Schema Mapping",
+      "state": "future",
+      "originBoardId": 1
+    }
+  }
+}

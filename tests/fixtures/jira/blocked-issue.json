@@ -1,0 +1,164 @@
+{
+  "id": "10016",
+  "key": "SCRUM-16",
+  "self": "https://example.atlassian.net/rest/api/3/issue/10016",
+  "fields": {
+    "summary": "Map Opportunity and Quote fields",
+    "issuetype": {
+      "id": "10004",
+      "name": "Story",
+      "subtask": false,
+      "hierarchyLevel": 0
+    },
+    "status": {
+      "id": "10000",
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "assignee": {
+      "accountId": "5f0000000000000000000002",
+      "displayName": "Sam Chen",
+      "active": true
+    },
+    "priority": {
+      "id": "3",
+      "name": "Medium"
+    },
+    "labels": [],
+    "issuelinks": [
+      {
+        "id": "20001",
+        "type": {
+          "id": "10000",
+          "name": "Blocks",
+          "inward": "is blocked by",
+          "outward": "blocks"
+        },
+        "inwardIssue": {
+          "id": "10020",
+          "key": "SCRUM-20",
+          "fields": {
+            "summary": "I-01 P0 - Tenant Metadata Absent",
+            "status": {
+              "id": "3",
+              "name": "In Progress",
+              "statusCategory": {
+                "key": "indeterminate",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "name": "High"
+            }
+          }
+        }
+      },
+      {
+        "id": "20002",
+        "type": {
+          "id": "10000",
+          "name": "Blocks",
+          "inward": "is blocked by",
+          "outward": "blocks"
+        },
+        "inwardIssue": {
+          "id": "10021",
+          "key": "SCRUM-21",
+          "fields": {
+            "summary": "Obtain Zoho sandbox access",
+            "status": {
+              "id": "10001",
+              "name": "Done",
+              "statusCategory": {
+                "key": "done",
+                "name": "Done"
+              }
+            },
+            "priority": {
+              "name": "High"
+            }
+          }
+        }
+      },
+      {
+        "id": "20003",
+        "type": {
+          "id": "10000",
+          "name": "Blocks",
+          "inward": "is blocked by",
+          "outward": "blocks"
+        },
+        "outwardIssue": {
+          "id": "10012",
+          "key": "SCRUM-12",
+          "fields": {
+            "summary": "Map Account fields to Zoho modules",
+            "status": {
+              "id": "10010",
+              "name": "QA Review",
+              "statusCategory": {
+                "key": "indeterminate",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "name": "High"
+            }
+          }
+        }
+      },
+      {
+        "id": "20004",
+        "type": {
+          "id": "10003",
+          "name": "Relates",
+          "inward": "relates to",
+          "outward": "relates to"
+        },
+        "inwardIssue": {
+          "id": "10011",
+          "key": "SCRUM-11",
+          "fields": {
+            "summary": "Document integration architecture",
+            "status": {
+              "id": "10001",
+              "name": "Done",
+              "statusCategory": {
+                "key": "done",
+                "name": "Done"
+              }
+            },
+            "priority": {
+              "name": "High"
+            }
+          }
+        }
+      }
+    ],
+    "created": "2026-09-20T10:15:00.000+0800",
+    "updated": "2026-10-01T16:40:12.345+0800",
+    "resolutiondate": null,
+    "duedate": null,
+    "parent": {
+      "id": "9002",
+      "key": "SCRUM-2",
+      "fields": {
+        "summary": "M2 - Zoho Schema, Modules & Field Mapping",
+        "issuetype": {
+          "name": "Epic",
+          "hierarchyLevel": 1
+        }
+      }
+    },
+    "sprint": {
+      "id": 3,
+      "name": "MIG S2 - Schema Mapping",
+      "state": "future",
+      "originBoardId": 1
+    },
+    "customfield_10016": 5
+  }
+}

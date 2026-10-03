@@ -1,0 +1,79 @@
+{
+  "id": "10020",
+  "key": "SCRUM-20",
+  "self": "https://example.atlassian.net/rest/api/3/issue/10020",
+  "fields": {
+    "summary": "I-01 P0 - Tenant Metadata Absent",
+    "issuetype": {
+      "id": "10003",
+      "name": "Task",
+      "subtask": false,
+      "hierarchyLevel": 0
+    },
+    "status": {
+      "id": "3",
+      "name": "In Progress",
+      "statusCategory": {
+        "key": "indeterminate",
+        "name": "In Progress"
+      }
+    },
+    "assignee": {
+      "accountId": "5f0000000000000000000001",
+      "displayName": "Alex Rivera",
+      "active": true
+    },
+    "priority": {
+      "id": "1",
+      "name": "Highest"
+    },
+    "labels": [
+      "risk"
+    ],
+    "issuelinks": [
+      {
+        "id": "20001",
+        "type": {
+          "id": "10000",
+          "name": "Blocks",
+          "inward": "is blocked by",
+          "outward": "blocks"
+        },
+        "outwardIssue": {
+          "id": "10016",
+          "key": "SCRUM-16",
+          "fields": {
+            "summary": "Map Opportunity and Quote fields",
+            "status": {
+              "id": "10000",
+              "name": "To Do",
+              "statusCategory": {
+                "key": "new",
+                "name": "To Do"
+              }
+            },
+            "priority": {
+              "name": "High"
+            }
+          }
+        }
+      }
+    ],
+    "created": "2026-09-20T10:15:00.000+0800",
+    "updated": "2026-10-01T16:40:12.345+0800",
+    "resolutiondate": null,
+    "duedate": null,
+    "parent": {
+      "id": "9002",
+      "key": "SCRUM-2",
+      "fields": {
+        "summary": "M2 - Zoho Schema, Modules & Field Mapping",
+        "issuetype": {
+          "name": "Epic",
+          "hierarchyLevel": 1
+        }
+      }
+    },
+    "customfield_10016": null
+  }
+}

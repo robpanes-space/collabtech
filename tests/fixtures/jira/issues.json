@@ -1,0 +1,385 @@
+{
+  "issues": [
+    {
+      "id": "10001",
+      "key": "SCRUM-1",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10001",
+      "fields": {
+        "summary": "M1 - Discovery, Metadata & Architecture",
+        "issuetype": {
+          "id": "10001",
+          "name": "Epic",
+          "subtask": false,
+          "hierarchyLevel": 1
+        },
+        "status": {
+          "id": "10001",
+          "name": "Done",
+          "statusCategory": {
+            "key": "done",
+            "name": "Done"
+          }
+        },
+        "assignee": {
+          "accountId": "5f0000000000000000000001",
+          "displayName": "Alex Rivera",
+          "active": true
+        },
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": "2026-09-30T12:00:00.000+0000",
+        "duedate": null,
+        "customfield_10016": null
+      }
+    },
+    {
+      "id": "10002",
+      "key": "SCRUM-2",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10002",
+      "fields": {
+        "summary": "M2 - Zoho Schema, Modules & Field Mapping",
+        "issuetype": {
+          "id": "10001",
+          "name": "Epic",
+          "subtask": false,
+          "hierarchyLevel": 1
+        },
+        "status": {
+          "id": "3",
+          "name": "In Progress",
+          "statusCategory": {
+            "key": "indeterminate",
+            "name": "In Progress"
+          }
+        },
+        "assignee": {
+          "accountId": "5f0000000000000000000001",
+          "displayName": "Alex Rivera",
+          "active": true
+        },
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": null,
+        "duedate": null,
+        "customfield_10016": null
+      }
+    },
+    {
+      "id": "10003",
+      "key": "SCRUM-3",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10003",
+      "fields": {
+        "summary": "M3 - Data Migration Development & Automation",
+        "issuetype": {
+          "id": "10001",
+          "name": "Epic",
+          "subtask": false,
+          "hierarchyLevel": 1
+        },
+        "status": {
+          "id": "10000",
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "assignee": null,
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": null,
+        "duedate": null,
+        "customfield_10016": null
+      }
+    },
+    {
+      "id": "10010",
+      "key": "SCRUM-10",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10010",
+      "fields": {
+        "summary": "Inventory Salesforce objects and record volumes",
+        "issuetype": {
+          "id": "10004",
+          "name": "Story",
+          "subtask": false,
+          "hierarchyLevel": 0
+        },
+        "status": {
+          "id": "10001",
+          "name": "Done",
+          "statusCategory": {
+            "key": "done",
+            "name": "Done"
+          }
+        },
+        "assignee": {
+          "accountId": "5f0000000000000000000001",
+          "displayName": "Alex Rivera",
+          "active": true
+        },
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": "2026-09-30T12:00:00.000+0000",
+        "duedate": null,
+        "parent": {
+          "id": "9001",
+          "key": "SCRUM-1",
+          "fields": {
+            "summary": "M1 - Discovery, Metadata & Architecture",
+            "issuetype": {
+              "name": "Epic",
+              "hierarchyLevel": 1
+            }
+          }
+        },
+        "sprint": {
+          "id": 1,
+          "name": "SCRUM Sprint 0",
+          "state": "active",
+          "startDate": "2026-09-28T09:00:00.000Z",
+          "endDate": "2026-10-12T09:00:00.000Z",
+          "originBoardId": 1
+        },
+        "customfield_10016": 5
+      }
+    },
+    {
+      "id": "10011",
+      "key": "SCRUM-11",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10011",
+      "fields": {
+        "summary": "Document integration architecture",
+        "issuetype": {
+          "id": "10004",
+          "name": "Story",
+          "subtask": false,
+          "hierarchyLevel": 0
+        },
+        "status": {
+          "id": "10001",
+          "name": "Done",
+          "statusCategory": {
+            "key": "done",
+            "name": "Done"
+          }
+        },
+        "assignee": {
+          "accountId": "5f0000000000000000000002",
+          "displayName": "Sam Chen",
+          "active": true
+        },
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": "2026-09-30T12:00:00.000+0000",
+        "duedate": null,
+        "parent": {
+          "id": "9001",
+          "key": "SCRUM-1",
+          "fields": {
+            "summary": "M1 - Discovery, Metadata & Architecture",
+            "issuetype": {
+              "name": "Epic",
+              "hierarchyLevel": 1
+            }
+          }
+        },
+        "sprint": {
+          "id": 1,
+          "name": "SCRUM Sprint 0",
+          "state": "active",
+          "startDate": "2026-09-28T09:00:00.000Z",
+          "endDate": "2026-10-12T09:00:00.000Z",
+          "originBoardId": 1
+        },
+        "customfield_10016": 3
+      }
+    },
+    {
+      "id": "10012",
+      "key": "SCRUM-12",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10012",
+      "fields": {
+        "summary": "Map Account fields to Zoho modules",
+        "issuetype": {
+          "id": "10004",
+          "name": "Story",
+          "subtask": false,
+          "hierarchyLevel": 0
+        },
+        "status": {
+          "id": "10010",
+          "name": "QA Review",
+          "statusCategory": {
+            "key": "indeterminate",
+            "name": "In Progress"
+          }
+        },
+        "assignee": {
+          "accountId": "5f0000000000000000000003",
+          "displayName": "Former user",
+          "active": false
+        },
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": null,
+        "duedate": "2026-10-10",
+        "parent": {
+          "id": "9002",
+          "key": "SCRUM-2",
+          "fields": {
+            "summary": "M2 - Zoho Schema, Modules & Field Mapping",
+            "issuetype": {
+              "name": "Epic",
+              "hierarchyLevel": 1
+            }
+          }
+        },
+        "sprint": {
+          "id": 1,
+          "name": "SCRUM Sprint 0",
+          "state": "active",
+          "startDate": "2026-09-28T09:00:00.000Z",
+          "endDate": "2026-10-12T09:00:00.000Z",
+          "originBoardId": 1
+        },
+        "customfield_10016": 8
+      }
+    },
+    {
+      "id": "10014",
+      "key": "SCRUM-14",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10014",
+      "fields": {
+        "summary": "Validate picklist values",
+        "issuetype": {
+          "id": "10005",
+          "name": "Subtask",
+          "subtask": true,
+          "hierarchyLevel": -1
+        },
+        "status": {
+          "id": "10000",
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "assignee": null,
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": null,
+        "duedate": null,
+        "parent": {
+          "id": "9012",
+          "key": "SCRUM-12",
+          "fields": {
+            "summary": "Map Account fields to Zoho modules",
+            "issuetype": {
+              "name": "Story",
+              "hierarchyLevel": 0
+            }
+          }
+        },
+        "sprint": {
+          "id": 1,
+          "name": "SCRUM Sprint 0",
+          "state": "active",
+          "startDate": "2026-09-28T09:00:00.000Z",
+          "endDate": "2026-10-12T09:00:00.000Z",
+          "originBoardId": 1
+        },
+        "customfield_10016": null
+      }
+    },
+    {
+      "id": "10015",
+      "key": "SCRUM-15",
+      "self": "https://example.atlassian.net/rest/api/3/issue/10015",
+      "fields": {
+        "summary": "Configure Jira board and workflow",
+        "issuetype": {
+          "id": "10003",
+          "name": "Task",
+          "subtask": false,
+          "hierarchyLevel": 0
+        },
+        "status": {
+          "id": "10001",
+          "name": "Done",
+          "statusCategory": {
+            "key": "done",
+            "name": "Done"
+          }
+        },
+        "assignee": {
+          "accountId": "5f0000000000000000000002",
+          "displayName": "Sam Chen",
+          "active": true
+        },
+        "priority": {
+          "id": "3",
+          "name": "Medium"
+        },
+        "labels": [],
+        "issuelinks": [],
+        "created": "2026-09-20T10:15:00.000+0800",
+        "updated": "2026-10-01T16:40:12.345+0800",
+        "resolutiondate": "2026-09-30T12:00:00.000+0000",
+        "duedate": null,
+        "sprint": {
+          "id": 1,
+          "name": "SCRUM Sprint 0",
+          "state": "active",
+          "startDate": "2026-09-28T09:00:00.000Z",
+          "endDate": "2026-10-12T09:00:00.000Z",
+          "originBoardId": 1
+        },
+        "customfield_10016": 1
+      }
+    }
+  ],
+  "isLast": true
+}

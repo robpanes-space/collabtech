@@ -1,0 +1,7 @@
+{
+  "id": "10000",
+  "key": "SCRUM",
+  "name": "Example Team",
+  "projectTypeKey": "software",
+  "self": "https://example.atlassian.net/rest/api/3/project/10000"
+}

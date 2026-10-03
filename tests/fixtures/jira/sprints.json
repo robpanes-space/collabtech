@@ -1,0 +1,75 @@
+{
+  "maxResults": 50,
+  "startAt": 0,
+  "isLast": true,
+  "values": [
+    {
+      "id": 1,
+      "name": "SCRUM Sprint 0",
+      "state": "active",
+      "startDate": "2026-09-28T09:00:00.000Z",
+      "endDate": "2026-10-12T09:00:00.000Z",
+      "originBoardId": 1
+    },
+    {
+      "id": 2,
+      "name": "MIG S1 - Discovery",
+      "state": "future",
+      "originBoardId": 1,
+      "startDate": "2026-10-12T09:00:00.000Z",
+      "endDate": "2026-10-26T09:00:00.000Z",
+      "goal": "Confirm Salesforce metadata and target architecture"
+    },
+    {
+      "id": 3,
+      "name": "MIG S2 - Schema Mapping",
+      "state": "future",
+      "originBoardId": 1,
+      "startDate": "2026-10-26T09:00:00.000Z",
+      "endDate": "2026-11-09T09:00:00.000Z",
+      "goal": "Approve Zoho module and field mapping"
+    },
+    {
+      "id": 4,
+      "name": "MIG S3 - Loads Quotes I",
+      "state": "future",
+      "originBoardId": 1
+    },
+    {
+      "id": 5,
+      "name": "MIG S4 - Loads Quotes II",
+      "state": "future",
+      "originBoardId": 1
+    },
+    {
+      "id": 20,
+      "name": "Platform hardening",
+      "state": "future",
+      "originBoardId": 1
+    },
+    {
+      "id": 6,
+      "name": "MIG S5 - UI Finance",
+      "state": "future",
+      "originBoardId": 1
+    },
+    {
+      "id": 7,
+      "name": "MIG S6 - Integrated QA",
+      "state": "future",
+      "originBoardId": 1
+    },
+    {
+      "id": 8,
+      "name": "MIG S7 - UAT Rehearsal",
+      "state": "future",
+      "originBoardId": 1
+    },
+    {
+      "id": 9,
+      "name": "MIG S8 - Cutover",
+      "state": "future",
+      "originBoardId": 1
+    }
+  ]
+}

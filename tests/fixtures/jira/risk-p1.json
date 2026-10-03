@@ -1,0 +1,36 @@
+{
+  "id": "10022",
+  "key": "SCRUM-22",
+  "self": "https://example.atlassian.net/rest/api/3/issue/10022",
+  "fields": {
+    "summary": "I-08 P1 - Rules and Reports Incomplete",
+    "issuetype": {
+      "id": "10003",
+      "name": "Task",
+      "subtask": false,
+      "hierarchyLevel": 0
+    },
+    "status": {
+      "id": "10000",
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "assignee": null,
+    "priority": {
+      "id": "2",
+      "name": "High"
+    },
+    "labels": [
+      "risk"
+    ],
+    "issuelinks": [],
+    "created": "2026-09-20T10:15:00.000+0800",
+    "updated": "2026-10-01T16:40:12.345+0800",
+    "resolutiondate": null,
+    "duedate": null,
+    "customfield_10016": null
+  }
+}

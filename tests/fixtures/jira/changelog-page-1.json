@@ -1,0 +1,96 @@
+{
+  "issueChangeLogs": [
+    {
+      "issueId": "10010",
+      "changeHistories": [
+        {
+          "id": "500",
+          "author": {
+            "self": "https://example.atlassian.net/rest/api/3/user?accountId=5f00",
+            "accountId": "5f0000000000000000000001",
+            "emailAddress": "alex.rivera@example.com",
+            "displayName": "Alex Rivera",
+            "active": true,
+            "timeZone": "Asia/Manila",
+            "accountType": "atlassian"
+          },
+          "created": 1790845200000,
+          "items": [
+            {
+              "field": "Sprint",
+              "fieldtype": "custom",
+              "fieldId": "customfield_10020",
+              "from": "",
+              "fromString": "",
+              "to": "1",
+              "toString": "SCRUM Sprint 0"
+            }
+          ]
+        },
+        {
+          "id": "501",
+          "author": {
+            "self": "https://example.atlassian.net/rest/api/3/user?accountId=5f00",
+            "accountId": "5f0000000000000000000001",
+            "emailAddress": "alex.rivera@example.com",
+            "displayName": "Alex Rivera",
+            "active": true,
+            "timeZone": "Asia/Manila",
+            "accountType": "atlassian"
+          },
+          "created": 1790935200000,
+          "items": [
+            {
+              "field": "status",
+              "fieldtype": "jira",
+              "fieldId": "status",
+              "from": "10000",
+              "fromString": "To Do",
+              "to": "10001",
+              "toString": "In Progress"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issueId": "10012",
+      "changeHistories": [
+        {
+          "id": "510",
+          "author": {
+            "self": "https://example.atlassian.net/rest/api/3/user?accountId=5f00",
+            "accountId": "5f0000000000000000000001",
+            "emailAddress": "alex.rivera@example.com",
+            "displayName": "Sam Chen",
+            "active": true,
+            "timeZone": "Asia/Manila",
+            "accountType": "atlassian"
+          },
+          "created": "2026-10-02T11:00:00.000+0000",
+          "items": [
+            {
+              "field": "status",
+              "fieldtype": "jira",
+              "fieldId": "status",
+              "from": "10000",
+              "fromString": "To Do",
+              "to": "10010",
+              "toString": "QA Review"
+            },
+            {
+              "field": "Link",
+              "fieldtype": "jira",
+              "fieldId": "issuelinks",
+              "from": null,
+              "fromString": null,
+              "to": "SCRUM-20",
+              "toString": "This issue is blocked by SCRUM-20"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "nextPageToken": "page-2"
+}

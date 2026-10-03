@@ -1,0 +1,9 @@
+# Never upload local secrets or build output — production values are set in Vercel's
+# Environment Variables, not in files.
+.env
+.env.*
+!.env.example
+.next
+node_modules
+*.log
+.vercel/output

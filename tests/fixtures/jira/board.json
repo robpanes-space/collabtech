@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "SCRUM board",
+  "type": "scrum",
+  "self": "https://example.atlassian.net/rest/agile/1.0/board/1",
+  "location": {
+    "projectId": 10000,
+    "projectKey": "SCRUM",
+    "projectName": "Example Team"
+  }
+}
