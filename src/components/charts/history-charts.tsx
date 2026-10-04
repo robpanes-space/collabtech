@@ -1,6 +1,6 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { ProjectTrendPoint, ThroughputPoint } from "@/lib/history/types";
 import { AXIS_PROPS, CHART_COLORS, ChartFigure, ChartTooltipBox, CURSOR_FILL, percentTick } from "./chart-kit";
 
@@ -14,7 +14,7 @@ export function ProjectProgressTrend({ points }: { points: readonly ProjectTrend
       summary={points.map((p) => `${p.label}: ${p.progress}% (${p.completed} of ${p.total} work items)`)}
     >
       <ResponsiveContainer width="100%" height="100%" initialDimension={{ width: 300, height }}>
-        <LineChart data={[...points]} margin={{ top: 8, right: 12, bottom: 0, left: -8 }}>
+        <AreaChart data={[...points]} margin={{ top: 8, right: 12, bottom: 0, left: -8 }}>
           <CartesianGrid stroke={CHART_COLORS.grid} vertical={false} />
           <XAxis dataKey="label" {...AXIS_PROPS} interval="preserveStartEnd" minTickGap={16} />
           <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} tickFormatter={percentTick} {...AXIS_PROPS} />
@@ -34,16 +34,19 @@ export function ProjectProgressTrend({ points }: { points: readonly ProjectTrend
               );
             }}
           />
-          <Line
+          {/* Soft area under the line: one series, flat low-opacity fill (no gradient). */}
+          <Area
             type="linear"
             dataKey="progress"
             name="Progress"
+            fill={CHART_COLORS.series1}
+            fillOpacity={0.1}
             stroke={CHART_COLORS.series1}
             strokeWidth={2}
             dot={points.length <= 31 ? { r: 2.5, strokeWidth: 0, fill: CHART_COLORS.series1 } : false}
             isAnimationActive={false}
           />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
     </ChartFigure>
   );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock } from "lucide-react";
 import type { SprintDashboardDto, SprintRefDto } from "@/lib/dashboard/types";
 import { formatDashboardDateRange } from "@/lib/format";
 import { DashboardNotice } from "./dashboard-notice";
@@ -66,6 +66,17 @@ function SprintBody({ sprint }: { sprint: SprintDashboardDto }) {
           </span>
         </div>
         <Meter value={sprint.progress} label={`${sprint.name} progress`} />
+        {sprint.elapsedPercent !== null ? (
+          <div className="flex flex-col gap-1">
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-viz-track" aria-hidden>
+              <div className="h-full rounded-full bg-muted-foreground/45" style={{ width: `${Math.min(100, sprint.elapsedPercent)}%` }} />
+            </div>
+            <p className="flex items-center gap-1.5 text-xs text-muted-foreground tabular-nums">
+              <Clock aria-hidden className="size-3.5" />
+              {sprint.elapsedPercent}% of sprint time elapsed
+            </p>
+          </div>
+        ) : null}
       </div>
 
       <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">

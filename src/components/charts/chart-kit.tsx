@@ -7,6 +7,7 @@ import type { ReactNode } from "react";
 
 export const CHART_COLORS = {
   series1: "var(--viz-series-1)",
+  good: "var(--status-good)",
   done: "var(--viz-done)",
   inProgress: "var(--viz-in-progress)",
   todo: "var(--viz-todo)",
