@@ -49,6 +49,10 @@ explanation) · **error** (friendly message + what to check) · **success**.
 - Shared chart styling: `src/components/charts/chart-kit.tsx` (axes, grid, tooltip shell,
   accessible `ChartFigure` with a text summary). Charts are the only client components besides
   nav, refresh, tooltips and risk filters.
+- KPI mini visuals live in `src/components/dashboard/kpi-visuals.tsx` (`ProgressRing`, `CompositionBar`,
+  `ShareBar`, `SegmentTrack`, `IconChip`). They take backend percentages or raw counts only — bar
+  geometry uses counts via flex-grow, never a derived percentage. Always decorative (`aria-hidden`)
+  beside visible value + provenance text.
 - Pages load one `DashboardDto` via `loadDashboard()`; components never compute metrics —
   `src/lib/dashboard/selectors.ts` only selects DTO records.
 

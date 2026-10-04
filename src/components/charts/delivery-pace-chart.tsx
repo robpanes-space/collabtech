@@ -1,14 +1,17 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, LabelList, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { AXIS_PROPS, CHART_COLORS, ChartFigure, ChartTooltipBox, CURSOR_FILL } from "./chart-kit";
 
 export type PacePoint = { sprint: string; label: string; committed: number; completed: number };
 
 /**
  * Committed vs completed per closed sprint — used for story-point velocity (when available)
- * or work-item throughput. Two series → legend always shown.
+ * or work-item throughput. Completed is drawn over its committed bar (same x, same width) so
+ * the unfilled remainder reads as "not delivered". Two series → legend always shown.
  */
+const BAR_SIZE = 28;
+
 export function DeliveryPaceChart({ title, unit, points }: { title: string; unit: string; points: readonly PacePoint[] }) {
   const height = 220;
   return (
@@ -18,7 +21,7 @@ export function DeliveryPaceChart({ title, unit, points }: { title: string; unit
       summary={points.map((p) => `${p.sprint}: ${p.completed} of ${p.committed} ${unit} completed`)}
     >
       <ResponsiveContainer width="100%" height="100%" initialDimension={{ width: 300, height }}>
-        <BarChart data={[...points]} margin={{ top: 8, right: 8, bottom: 0, left: -16 }} barGap={2}>
+        <BarChart data={[...points]} margin={{ top: 20, right: 8, bottom: 0, left: -16 }} barGap={-BAR_SIZE}>
           <CartesianGrid stroke={CHART_COLORS.grid} vertical={false} />
           <XAxis dataKey="label" {...AXIS_PROPS} />
           <YAxis allowDecimals={false} {...AXIS_PROPS} />
@@ -39,8 +42,10 @@ export function DeliveryPaceChart({ title, unit, points }: { title: string; unit
               );
             }}
           />
-          <Bar dataKey="committed" name="Committed" fill={CHART_COLORS.todo} radius={[4, 4, 0, 0]} maxBarSize={28} isAnimationActive={false} />
-          <Bar dataKey="completed" name="Completed" fill={CHART_COLORS.done} radius={[4, 4, 0, 0]} maxBarSize={28} isAnimationActive={false} />
+          <Bar dataKey="committed" name="Committed" fill={CHART_COLORS.todo} fillOpacity={0.45} radius={[4, 4, 0, 0]} barSize={BAR_SIZE} isAnimationActive={false} />
+          <Bar dataKey="completed" name="Completed" fill={CHART_COLORS.done} radius={[4, 4, 0, 0]} barSize={BAR_SIZE} isAnimationActive={false}>
+            <LabelList dataKey="completed" position="top" fill={CHART_COLORS.text} fontSize={12} />
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </ChartFigure>

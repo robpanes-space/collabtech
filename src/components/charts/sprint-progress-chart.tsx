@@ -1,6 +1,6 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { SprintProgressPoint } from "@/lib/dashboard/types";
 import { HEALTH_DISPLAY } from "@/components/dashboard/status";
 import { AXIS_PROPS, CHART_COLORS, ChartFigure, ChartTooltipBox, CURSOR_FILL, GRID_PROPS, percentTick } from "./chart-kit";
@@ -8,7 +8,7 @@ import { AXIS_PROPS, CHART_COLORS, ChartFigure, ChartTooltipBox, CURSOR_FILL, GR
 /** One horizontal bar per migration sprint, 0–100%, in roadmap order. Single series → no legend. */
 export function SprintProgressChart({ points }: { points: readonly SprintProgressPoint[] }) {
   // `track` is bar geometry (the unfilled part of a 0–100 bar), not a metric.
-  const data = points.map((point) => ({ ...point, label: `S${point.roadmapPosition ?? "?"}`, track: 100 - point.progress }));
+  const data = points.map((point) => ({ ...point, label: `S${point.roadmapPosition ?? "?"} · ${point.shortName}`, track: 100 - point.progress }));
   const height = Math.max(160, data.length * 34 + 36);
 
   return (
@@ -21,7 +21,13 @@ export function SprintProgressChart({ points }: { points: readonly SprintProgres
         <BarChart data={data} layout="vertical" margin={{ top: 4, right: 40, bottom: 4, left: 0 }} barCategoryGap={8}>
           <CartesianGrid {...GRID_PROPS} />
           <XAxis type="number" domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} tickFormatter={percentTick} {...AXIS_PROPS} />
-          <YAxis type="category" dataKey="label" width={32} {...AXIS_PROPS} />
+          <YAxis
+            type="category"
+            dataKey="label"
+            width={120}
+            {...AXIS_PROPS}
+            tickFormatter={(label: string) => (label.length > 18 ? `${label.slice(0, 17)}…` : label)}
+          />
           <Tooltip
             cursor={CURSOR_FILL}
             content={({ active, payload }) => {
@@ -40,7 +46,12 @@ export function SprintProgressChart({ points }: { points: readonly SprintProgres
             }}
           />
           {/* Completed share + the remaining track (visual only), stacked so 0% rows still render. */}
-          <Bar dataKey="progress" stackId="sprint" fill={CHART_COLORS.series1} maxBarSize={18} isAnimationActive={false} />
+          <Bar dataKey="progress" stackId="sprint" maxBarSize={18} isAnimationActive={false}>
+            {/* Same rule as <Meter>: a finished sprint reads as complete (green); label + tooltip carry it too. */}
+            {data.map((point) => (
+              <Cell key={point.sprintId} fill={point.progress >= 100 ? CHART_COLORS.good : CHART_COLORS.series1} />
+            ))}
+          </Bar>
           <Bar
             dataKey="track"
             stackId="sprint"

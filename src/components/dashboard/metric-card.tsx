@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { MetricValue } from "@/lib/dashboard/types";
 import { cn } from "@/lib/utils";
+import { IconChip } from "./kpi-visuals";
 import { InfoHint } from "./primitives";
 
 /**
@@ -14,6 +15,8 @@ export function MetricCard({
   provenance,
   hint,
   icon,
+  tone = "neutral",
+  visual,
   emphasis,
   className,
 }: {
@@ -23,19 +26,23 @@ export function MetricCard({
   provenance?: string;
   hint?: ReactNode;
   icon?: ReactNode;
+  /** Icon chip tint; status tones always ship with the label text. */
+  tone?: Parameters<typeof IconChip>[0]["tone"];
+  /** Optional decorative mini visual (meter, segments) drawn from the same DTO values. */
+  visual?: ReactNode;
   emphasis?: "critical" | "serious";
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        "flex min-w-0 flex-col gap-1 rounded-xl border border-border bg-card p-4",
-        emphasis === "critical" && "border-status-critical/40",
+        "flex min-w-0 flex-col gap-1.5 rounded-xl border border-border bg-card p-4 transition-colors hover:border-foreground/15",
+        emphasis === "critical" && "border-status-critical/40 bg-status-critical/[0.04] hover:border-status-critical/60",
         className,
       )}
     >
-      <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
-        {icon}
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        {icon ? <IconChip tone={tone}>{icon}</IconChip> : null}
         <span className="min-w-0 leading-tight">{label}</span>
         {hint ? <InfoHint label={`About ${label}`}>{hint}</InfoHint> : null}
       </div>
@@ -43,6 +50,7 @@ export function MetricCard({
         <span className="truncate text-3xl font-semibold tracking-tight tabular-nums">{value}</span>
         {suffix ? <span className="text-sm text-muted-foreground">{suffix}</span> : null}
       </div>
+      {visual ? <div className="mt-0.5">{visual}</div> : null}
       {provenance ? <p className="text-xs text-muted-foreground">{provenance}</p> : null}
     </div>
   );
